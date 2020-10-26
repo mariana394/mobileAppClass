@@ -29,31 +29,42 @@ class NewWidget extends StatelessWidget {
         elevation: 0.5,
         centerTitle:true,
       ),
-      body: ListView(
-        children:<Widget>[
-          ListTile(
-            leading: Icon(Icons.account_circle, size: 50.0),
-            title: Text(
-                'person 1',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
+      body: NewBodyWidget(),
 
-            ),
-            ),
-            subtitle: Text ('Company X '),
-            trailing: Icon(Icons.keyboard_arrow_right),
-            onTap:(){},
-          ),
-          ListTile(
-            leading: Icon(Icons.account_circle),
-            title: Text('person 2'),
-            subtitle: Text ('Company Y '),
-            trailing: Icon(Icons.keyboard_arrow_right),
-            onTap:(){},
-          ),
-        ]
-      ),
+    );
+  }
+}
 
+class NewBodyWidget extends StatelessWidget {
+  const NewBodyWidget({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children:<Widget>[
+        ListTile(
+          leading: Icon(Icons.account_circle, size: 50.0),
+          title: Text(
+              'person 1',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+
+          ),
+          ),
+          subtitle: Text ('Company X '),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap:(){},
+        ),
+        ListTile(
+          leading: Icon(Icons.account_circle),
+          title: Text('person 2'),
+          subtitle: Text ('Company Y '),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap:(){},
+        ),
+      ]
     );
   }
 }
